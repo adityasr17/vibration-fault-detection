@@ -1,0 +1,13 @@
+{
+  "name": "vibration-fault-detection",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "backend": "backend\\venv\\Scripts\\python.exe -m uvicorn main:app --reload --app-dir backend\\venv\\app --port 8000",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
