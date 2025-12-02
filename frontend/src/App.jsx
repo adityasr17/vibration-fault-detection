@@ -137,7 +137,9 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           signal: prediction.signal,
-          fs: 12000 // Assuming default fs
+          fs: 12000, // Assuming default fs
+          condition: prediction.prediction,
+          confidence: prediction.confidence
         })
       })
       const blob = await response.blob()
